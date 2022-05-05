@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="resume.css">
+        <Title>Praneeth</Title>
+        
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Oleo Script Swash Caps' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            document.addEventListener('DOMContentLoaded', fadeout);
+            function fadeout(){
+                var b = document.querySelector('body');
+                var op = 0;
+                b.style.backgroundColor = "white";
+                id = setInterval(fadeout, 5);
+                function fadeout() {
+                    if (op >= 1) {
+                        clearInterval(id);
+                        b.style.backgroundColor = "rgba(230, 218, 206, 1)";
+                    }
+                    else {
+                        op = op + 0.01;
+                        b.style.opacity = op;
+                    }
+                }
+                return true;
+            }
+        </script>
+
+        <script>
+            function incre(bar,wi){
+                var i =0;
+                bar.style.width = 0 + '%';
+                var p = setInterval(bar_incre, 5);
+                function bar_incre() {
+                    if (i>=100 || i >= wi) {
+                        clearInterval(p);
+                        return;
+                    }
+                    else {
+                        i=i+0.2;
+                        bar.style.width = i +'%';
+                    }
+                }
+            }
+
+            window.onscroll = ()=>{ 
+                document.querySelectorAll('.js-slidein').forEach((div)=>{
+                    var bottomObject = div.offsetTop + div.offsetHeight/3;
+                    var bottomWindow = window.scrollY + window.innerHeight;
+                    if(bottomObject<bottomWindow){
+                        div.classList.add('js-slidein-visible');
+                    }
+                });
+                document.querySelectorAll('.bars-slidein').forEach((bar)=>{
+                    var bottomObject = bar.offsetTop + bar.offsetHeight+ document.querySelector('.spl-tab').offsetTop;
+                    var bottomWindow = window.scrollY + window.innerHeight;
+                    if (bottomObject < bottomWindow) {
+                        var wi = parseInt(bar.style.width.replace('%', ''));
+                        incre(bar,wi);
+                        bar.classList.remove('bars-slidein');
+                    }
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Praneeth</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="section1">
+            <h1>RESUME</h1>
+            <div class="tabs">
+                <div style="text-align: left; width: 100%; height: 100%;">
+                    <h2>Experience</h2>
+                </div>
+                <div class="tab">
+                    <div class="sub-sec1">
+                        <h3>May-August 2021</h3>
+                        <p style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Summer Research Intern</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                        International Institute of Information Technology Hyderabad</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Professor CR Rao Rd, Gachibowli, Hyderabad, Telangana 500032</p>
+                    </div>
+                    <div class="sub-sec2">
+                        <p >In this Internship, I worked under S Bapi Raju professor from IIITH, with the guidance of a Ph.D. scholar <br>
+                        Project is building a chess engine using the Reinforcement Learning concepts that think like a human. <br>
+                        My work is to fetch the data from lichess using API and clean and analyse it and to plot the data. <br>
+                        </p>
+                        <p>This work presented at ACCS 8th Annual Conference Of Cognitive Science 2022 (paper id 21)</p>
+                    </div>
+                </div>
+
+                <div class="tab js-slidein">
+                    <div class="sub-sec1">
+                        <h3>July-August 2021</h3>
+                        <p
+                            style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                            Graduate Rotational Internship Program</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            The Sparks Foundation</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Under Computer Vision & IoT function</p>
+                    </div>
+                    <div class="sub-sec2">
+                        <p>I worked on projects related to Computer Vision and IoT. <br>
+                        The tasks I completed are Object Detection, Optical Character Recognition(OCR), Color Identification in Images,
+                        Real-time Mask
+                        Detection, Real-time traffic sign Recognition system. <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tab js-slidein">
+                    <div class="sub-sec1">
+                        <h3>June-Present 2021</h3>
+                        <p
+                            style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                            Executive Member</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Flying and Robotics Club NITK</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Part of WEB team</p>
+                    </div>
+                    <div class="sub-sec2">
+                        <p>I am web developer in this club of NITK. <br>
+                            My work is to build the backend for the club website. <br>
+                            Framework used is django. <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="text-align: left; width: 100%; height: 100%; margin-top: 65px;">
+                    <h2>Education</h2>
+                </div>
+                <div class="tab js-slidein">
+                    <div class="sub-sec1 sub-sec1-spl">
+                        <h3>2019-2023</h3>
+                        <p
+                            style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                            National Institute of Technology Karnataka, Surathkal</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            B.Tech in Information Technology</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            <strong>Current CGPA : </strong> 8.67
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            NH 66, Srinivasnagar, Surathkal, Mangalore, Karnataka 575025</p>
+                    </div>
+                    <div class="sub-sec2 sub-sec2-spl">
+                        <img src="NITK_PNG_LOGO.png" alt="NITK LOGO">
+                    </div>
+                </div>
+                <div class="tab js-slidein">
+                    <div class="sub-sec1 sub-sec1-spl">
+                        <h3>2017-2019</h3>
+                        <p
+                            style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                            New Vision Juniour College</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Higher Secondary Graduate</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            <strong>Percentage : </strong> 96.4%
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Khammam Bypass Rd, Indira Nagar, Indira Nagar Colony, Khammam, Telangana 507002
+                        </p>
+                    </div>
+                    <div class="sub-sec2 sub-sec2-spl">
+                        <img src="Newvisionlogo.png" alt="New vision logo">
+                    </div>
+                </div>
+                <div class="tab js-slidein">
+                    <div class="sub-sec1 sub-sec1-spl">
+                        <h3>Completed in 2017</h3>
+                        <p
+                            style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                            New Vision the Olympiad School</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Secondary Education</p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            <strong>GPA : </strong> 9.8
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Khammam Bypass Rd, Indira Nagar, Indira Nagar Colony, Khammam, Telangana 507002
+                        </p>
+                    </div>
+                    <div class="sub-sec2 sub-sec2-spl">
+                        <img src="Newvisionlogo.png" alt="New vision logo">
+                    </div>
+                </div>
+
+                <div style="text-align: left; width: 100%; height: 100%; margin-top: 65px;">
+                    <h2>Professional skillset</h2>
+                </div>
+                <div class="tab js-slidein spl-tab" style="height: fit-content;">
+                    <div class="sub-sec1" style="padding: 0;padding-left: 30px;">
+                        <h3>Programming/DBMS</h3><br>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Python 
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            C++
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            basic JAVA
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Scala
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            MySQL
+                        </p>
+
+                        <h3>FrameWorks</h3><br>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Django
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Node-Js
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Express
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Scikit-Learn
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Pandas
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            TensorFlow
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Keras
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Git
+                        </p>
+
+                        <h3>Web Development</h3><br>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            HTML5
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            CSS
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            JavaScript
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            Sass
+                        </p>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            React
+                        </p>
+
+                        <h3>Cryptography</h3> <br>
+                        <p style="font-size: 14px;font-family: 'Montserrat';">
+                            basics
+                        </p>
+                    </div>
+                    <div class="sub-sec2" style="padding: 0;padding-top: 30px;text-align: left;padding-right: 10px;">
+                        <div style="margin-top: 30px;">
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width: 90%;"></div> <span>90%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:95%;"></div> <span>95%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:60%;"></div> <span>60%</span><br>
+                            <div class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:60%;"></div> <span>50%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:65%;"></div> <span>65%</span><br>
+                        </div>
+                        <div style="margin-top: 60px;">
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:90%;"></div> <span>90%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:80%;"></div> <span>80%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:80%;"></div> <span>80%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:50%;"></div> <span>50%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:100%;"></div> <span>100%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:65%;"></div> <span>65%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:65%;"></div> <span>65%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0" data-angle-style-location="style"
+                                style="visibility: inherit; width:100%;"></div> <span>100%</span><br>
+                        </div>
+                        <div class="bar-sec-spl">
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:99%;"></div> <span>99%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:95%;"></div> <span>95%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:90%;"></div> <span>90%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:75%;"></div> <span>75%</span><br>
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:60%;"></div> <span>60%</span><br>
+                        </div>
+                        <div style="margin-top: 60px;">
+                            <div  class=" bars bars-slidein" data-angle="0"
+                                data-angle-style-location="style" style="visibility: inherit; width:70%;"></div> <span>75%</span><br>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: left; width: 100%; height: 100%; margin-top: 65px;">
+                    <h2>Area of Interest</h2>
+                </div>
+                <div class="tab js-slidein">
+                    <ul class="ul">
+                        <li class="six">
+                            Machine Learning
+                        </li>
+                        <li class="six">
+                            Deep Learning
+                        </li>
+                        <li class="six">
+                            Natural Language Processing
+                        </li>
+                        <li class="six">
+                            Web Application Development
+                        </li>
+                        <li class="six">
+                            Computer Vision
+                        </li>
+                        <li class="six">
+                            Data Science
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

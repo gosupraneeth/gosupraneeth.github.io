@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="projects.css">
+    <Title>Praneeth</Title>
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oleo Script Swash Caps' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', fadeout);
+        function fadeout() {
+            var b = document.querySelector('body');
+            var op = 0;
+            b.style.backgroundColor = "white";
+            id = setInterval(fadeout, 5);
+            function fadeout() {
+                if (op >= 1) {
+                    clearInterval(id);
+                    b.style.backgroundColor = "rgba(230, 218, 206, 1)";
+                }
+                else {
+                    op = op + 0.01;
+                    b.style.opacity = op;
+                }
+            }
+            return true;
+        }
+    </script>
+    <script>
+        function incre(bar, wi) {
+            var i = 0;
+            bar.style.width = 0 + '%';
+            var p = setInterval(bar_incre, 5);
+            function bar_incre() {
+                if (i >= 100 || i >= wi) {
+                    clearInterval(p);
+                    return;
+                }
+                else {
+                    i = i + 0.2;
+                    bar.style.width = i + '%';
+                }
+            }
+        }
+
+        window.onscroll = () => {
+            document.querySelectorAll('.js-slidein').forEach((div) => {
+                var bottomObject = div.offsetTop + div.offsetHeight / 3;
+                var bottomWindow = window.scrollY + window.innerHeight;
+                if (bottomObject < bottomWindow) {
+                    div.classList.add('js-slidein-visible');
+                }
+            });
+            document.querySelectorAll('.bars-slidein').forEach((bar) => {
+                var bottomObject = bar.offsetTop + bar.offsetHeight + document.querySelector('.spl-tab').offsetTop;
+                var bottomWindow = window.scrollY + window.innerHeight;
+                if (bottomObject < bottomWindow) {
+                    var wi = parseInt(bar.style.width.replace('%', ''));
+                    incre(bar, wi);
+                    bar.classList.remove('bars-slidein');
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Praneeth</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" aria-current="page" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section1">
+        <h1>PROJECTS</h1>
+        <div class="tabs">
+            <!-- Project-1 -->
+            <div class="tab">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Long Short Term Memory Networks for Lexical Normalization of Tweets</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Presented in 12th ICCCNT conference</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        This is a project implementing Deep Learning concepts to convert a non-standard text into a standard text which is
+                        more readable
+                        and universal in nature. <br> <br>
+                        It is a Sequential model with an LSTM layer and got accuracy of about – 80% <br>
+                        </p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        We presented this project at the 12th ICCCNT conference 2021(paper id 351).</p>
+                    <p style="font-family: Raleway;"> <a href="https://ieeexplore.ieee.org/document/9579684" style="text-decoration: none;">Link to publication</a> </p>
+                </div>
+                <div class="sub-sec2">
+                    <img src="gif1.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>LSTM, Deep Learning, NLP</p>
+                        <a href="https://github.com/gosupraneeth/Lexical_Normalization">click here for code</a> <br>
+                        <a href="https://drive.google.com/file/d/15oCkEhK-eEwmdpWnc7nCQcwPI513LTLE/view?usp=sharing"> click here for conference certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project-2 -->
+            <div class="tab js-slidein">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Computer Controlling operations using Hand
+                    Gestures</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Can operate Computer with hand Gestures</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        In this project a user can control his PC using simple and friendly hand gestures.
+                    </p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Users can use point on the screen using the index finger and many actions like scroll, left click, right click, double click, etc.. can be done using the gestures.</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Done using the simple camera with every PC. Software involved is mediapipe, DL, pyautogui.
+                    </p>
+                </div>
+                <div class="sub-sec2">
+                    <img src="gif6.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>mediapipe, DNN, pyautogui</p>
+                        <a href="https://github.com/gosupraneeth/Computer_Operations_Using_Hand_Gestures">click here for code</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Project-3 -->
+            <div class="tab js-slidein">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Traffic-Sign-Predictor</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Computer Vision</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        This is a project part of the development of self-driving cars, one of the key challenges in computer vision, allowing
+                        these cars to
+                        develop an understanding of their environment from digital images using the GTSRB dataset.
+                        </p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        It uses the Convolutional Neural Networks for training the model and got accuracy about – 96.6%</p>
+                </div>
+                <div class="sub-sec2">
+                <img src="gif2.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>CNN , Deep Learning</p>
+                        <a href="https://github.com/gosupraneeth/Traffic-Sign-Predictor">click here for code</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Project-4 -->
+            <div class="tab js-slidein">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Voice Based OS</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Operates with voice command</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        This is a project under Operating Systems, where we can access the files, applications, and many more actions using
+                        voice
+                        commands.
+                        </p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        An add-on to this project is voice-based form filling, where users can fill the form by speaking out.</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Can be used to use Google, Youtube, Wikipedia, and many other functions on a PC preferably Ubuntu but works on Windows
+                        too.
+                       </p>
+                </div>
+                <div class="sub-sec2">
+                    <img src="gif3.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>SpeechRecognition, Selenium, TKinter, gTTs libraries</p>
+                        <a href="https://github.com/gosupraneeth/IT253-OS-Project">click here for code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project-5 -->
+            <div class="tab js-slidein">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Movie Review Application with Chatbot</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Web Application with AI bot</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        This is a web application that gives suggestions about movies to the user based on his activity, it also has a chatbot
+                        where it
+                        suggests movies based on mood he has, language and genre he prefers.</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Developed using HTML, CSS and JavaScript with Django framework, the IMDb dataset is used for the movies. To built the
+                        chatbot
+                        RASA framework is used.</p>
+                </div>
+                <div class="sub-sec2">
+                    <img src="gif5.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>Python, Django, RASA</p>
+                        <a href="https://github.com/gosupraneeth/IT254-Project">click here for code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project-6 -->
+            <div class="tab js-slidein">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Minesweeper</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Knowledge-based agent</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        This project is an AI that can play Minesweeper.<br><br> This knowledge-based agent make decisions by considering their knowledge base, and making inferences based on that
+                        knowledge. <br><br>
+                        The AI is built using the Propositional Logic.</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Game consists AI move button to help the user to make the possible correct move.</p>
+                </div>
+                <div class="sub-sec2">
+                    <img src="gif4.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>Pygame, Python, Propositional Logic</p>
+                        <a href="https://github.com/gosupraneeth/Minesweeper">click here for code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project-7 -->
+            <div class="tab js-slidein">
+                <div id="comp-k0p06mvh" class="_2bjge">
+                    <div class="qDqoW" data-testid="container-bg"></div>
+                    <div data-mesh-id="comp-k0p06mvhinlineContent" data-testid="inline-content" class="">
+                        <div data-mesh-id="comp-k0p06mvhinlineContent-gridContainer" data-testid="mesh-container-content"></div>
+                    </div>
+                </div>
+                <div class="sub-sec1">
+                    <h3>Uno-Morse-Conversie</h3>
+                    <p
+                        style="font: var(--font_7);color: rgb(var(--color_15));--font_7: normal normal normal 14px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;--color_15: 0,0,0;">
+                        Knowledge-based agent</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        This project aims to convert the morse code to text and also converts to speech. <br><br> In this input is taken in the form of a
+                        button,
+                        where we can also change the input to use the model.</p>
+                    <p style="font-size: 14px;font-family: 'Montserrat';">
+                        Built using the K-Means algorithm which is one of the Unsupervised learning model.</p>
+                </div>
+                <div class="sub-sec2">
+                    <img src="gif7.gif">
+                    <div class="on_hover">
+                        <h3>Details</h3>
+                        <p>Python, K-Means, gTTs</p>
+                        <a href="https://github.com/gosupraneeth/Uno-Morse-Conversie">click here for code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <Title>Praneeth</Title>
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Oleo Script Swash Caps' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            function fade() {
+                    var b = document.querySelector('body');
+                    var op = 1;
+                    id = setInterval(fadeout, 5);
+                    function fadeout() {
+                        if (op <= 0) {
+                            clearInterval(id);
+                            open_1();
+                        }
+                        else {
+                            op = op - 0.01;
+                            b.style.opacity = op;
+                        }
+                    }
+                    return false;
+                }
+                function open_1(){
+                    window.open('resume.html', '_self');
+                }
+                function fade1() {
+                        var b = document.querySelector('body');
+                        var op = 1;
+                        id = setInterval(fadeout, 5);
+                        function fadeout() {
+                            if (op <= 0) {
+                                clearInterval(id);
+                                open_2();
+                            }
+                            else {
+                                op = op - 0.01;
+                                b.style.opacity = op;
+                            }
+                        }
+                        return false;
+                    }
+                function open_2() {
+                    window.open('projects.html', '_self');
+                }
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded',()=>{
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                document.querySelector('.section1').style.height = (h) + 'px';
+                if (w < 990) {
+                    document.querySelector('.section2').classList.add('js-slidein');
+                    setTimeout(()=>{
+                        var h = window.innerHeight;
+                        document.querySelector('.section2').style.height = (h - 75) + 'px';
+                        document.querySelector('.section1').style.height = (h) + 'px';
+                    },1500);
+                    
+                }
+            });
+            window.onresize =()=>{
+                var w = window.innerWidth;
+                if(w<990){
+                    document.querySelector('.section2').classList.add('js-slidein');
+                    var h = window.innerHeight;
+                    document.querySelector('.section2').style.height = (h - 75) + 'px';
+                    document.querySelector('.section1').style.height = (h) + 'px';
+                }
+                else{
+                    document.querySelector('.section2').classList.add('js-slidein-visible');
+                    var h = window.innerHeight;
+                    document.querySelector('.section2').style.height = (h-35) + 'px';
+                    document.querySelector('.section1').style.height = (h-35) + 'px';
+                }
+            };
+            window.onscroll = () => {
+                    document.querySelectorAll('.js-slidein').forEach((div) => {
+                        var bottomObject = div.offsetTop + div.offsetHeight / 3;
+                        var bottomWindow = window.scrollY + window.innerHeight;
+                        if (bottomObject < bottomWindow) {
+                            div.classList.add('js-slidein-visible');
+                        }
+                    });
+                };
+        </script>
+    </head>
+    <body>
+        <div id="desktop" style="width: 100%; height: 100%;">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark nav-custom">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Praneeth</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="fade" onclick="return fade()" href="resume.html">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="return fade1()" href="projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="forcolor">
+                <div class="name-section">
+                    <div class="section1">
+                        <div class="trans">
+                            <div class="name">
+                                <span style="font-size: 20px; font-family: Pattaya;letter-spacing: 4px;">Hello, I'M</span><br>
+                                <span class="main-name">Praneeth</span><br>
+                                <span class="font_4">Student at National Institute of Technology Karnataka</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section2">
+                        <div class="details-div">
+                            <svg   viewBox="0 0 205 205" ref="svgcomp-k28qs1lv"
+                                key="svgcomp-k28qs1lv" id="svgcomp-k28qs1lv" version="1.1" role="img"
+                                aria-label="Maya Nelson Headshot">
+                                <defs>
+                                    <filter id="mask-comp-k28qs1lv-svg-bleach">
+                                        <feColorMatrix type="matrix" values="0 0 0 0 1
+                                    				0 0 0 0 1
+                                    				0 0 0 0 1
+                                    				0 0 0 1 0"></feColorMatrix>
+                                    </filter>
+                                    <mask id="mask-comp-k28qs1lv">
+                                        <use filter="url(#mask-comp-k28qs1lv-svg-bleach)" id="mask-comp-k28qs1lv-svg-use"
+                                            xlink:href="#mask-comp-k28qs1lv-svg" width="100%" height="100%" x="0" y="0"></use>
+                                    </mask>
+                                    <svg id="mask-comp-k28qs1lv-svg" preserveAspectRatio="none" data-bbox="20 20 160 160"
+                                        viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg"
+                                        data-type="shape">
+                                        <g>
+                                            <path
+                                                d="M180 100c0 44.183-35.817 80-80 80s-80-35.817-80-80 35.817-80 80-80 80 35.817 80 80z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </defs>
+                                <image xlink:href="Praneeth_2.jpg" key="image" data-type="image" width="205" height="205"
+                                    preserveAspectRatio="xMidYMid slice" mask="url(#mask-comp-k28qs1lv)"
+                                    data-svg-mask="mask-comp-k28qs1lv-svg" style="width: 205px; height: 205px; object-fit: cover;">
+                                </image>
+                            </svg>
+                            <div style="margin: 1%;margin-top: 20px;">
+                                <span
+                                    style="font-family: 'Montserrat'; font: var(--font_3);color: rgb(var(--color_15));--font_3: normal normal bold 27px/1.4em 'Montserrat', poppins-semibold,poppins,sans-serif;">Gosu
+                                    <br> Praneeth</span>
+                            </div>
+                            <div id="comp-k0med56b" class="_10k60"></div>
+                            <div style="margin-top: 40px; margin-bottom: 50px;" data-testid="richTextElement">
+                                <p class="font_8" style="line-height:1.2em;text-align:center;font-size:17px"><span
+                                        style="letter-spacing:0.25em">STUDENT</span></p>
+                            </div>
+                            <div class="icons-div">
+                                <a href="https://www.linkedin.com/in/praneeth-gosu-4074b71ba/"
+                                    style="text-decoration: none; margin: 1%;">
+                                    <img alt="LinkedIn"
+                                        src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_31,h_31,al_c,q_85,usm_0.66_1.00_0.01/6ea5b4a88f0b4f91945b40499aa0af00.webp"
+                                        style="width: 25px; height: 25px; object-fit: cover; margin: 2%;">
+                                </a>
+                                <a href="https://github.com/gosupraneeth" style="text-decoration: none; margin: 1%;">
+                                    <img alt="Github" src="gitlogo.png"
+                                        style="width: 25px; height: 25px; object-fit: cover; margin: 2%;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="message"> <h1>Plese view this on desktop</h1></div>
+    </body>
+</html>

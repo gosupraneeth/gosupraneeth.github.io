@@ -1,0 +1,247 @@
+* {
+            margin: 0;
+            padding: 0;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fafafa;
+    padding-top: 75px;
+    background-color: rgba(230, 218, 206, 1);
+}
+.fade{
+    animation: fadeout 0.8s;
+    animation-timing-function: linear;
+}
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.nav-custom{
+    height: 75px;
+}
+.nav-item{
+    margin: 5%;
+}
+.section1{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.section1 h1{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: emoji;
+}
+.section1 h2{
+    margin-left: 5%;
+    left: 0;
+}
+.section1 h3{
+    color: rgb(0,80,255);
+    font: var(--font_6);
+    --font_6: normal normal bold 20px/1.4em poppins-semibold,poppins,sans-serif;
+}
+.tab{
+    margin: 5%;
+    height: fit-content;
+    display: inline-flex;
+    flex-direction: row;
+    border: var(--container-corvid-border-width,var(--brw,1px)) solid var(--container-corvid-border-color,rgba(var(--brd,var(--color_15)),var(--alpha-brd,1)));
+    border-radius: var(--rd,5px);
+    box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6));
+    background-color: white;
+    --container-corvid-border-color: rgba(var(--brd,var(--color_15)),var(--alpha-brd,1));
+    --brd: var(--color_15);
+    --alpha-brd: 1;
+    --color_15: 0,0,0;
+    --color_11: 255,255,255;
+    --alpha-bg: 1;
+    --rd: 0px;
+    --brw: 0px;
+    --shd: -11.31px 11.31px 25px 0px rgba(138,131,124,0.23);
+    width: 90%;
+    padding-top: 20px;
+}
+.sub-sec1{
+    text-align: left;
+    padding: 20px;
+    padding-left: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+.sub-sec2{
+    padding: 10px;
+    padding-top: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+}
+.sub-sec1-spl{
+    width: 70%;
+}
+.sub-sec2-spl{
+    width: 20%;
+}
+
+#bars {
+    --lnw: 6px;
+    --brd: var(--color_18);
+    --color_18: 0,214,70;
+    --alpha-brd: 1;
+    transform-origin: center 6px;
+}
+
+
+.bars {
+    box-sizing: border-box;
+    border-top: var(--lnw,2px) solid rgba(var(--brd,var(--color_15)),var(--alpha-brd,1));
+    --lnw: 6px;
+    --brd: var(--color_18);
+    --color_18: 0,214,70;
+    --alpha-brd: 1;
+    margin-top: 6.5px;
+    height: 0;
+}
+.bar-sec-spl{
+    margin-top: 60px;
+}
+.ul{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    align-items: left;
+}
+
+.six {
+  color:black;
+  list-style:none;
+  line-height: 1.5;
+  font-size:25px;
+}
+
+.six:before {
+  font-family:FontAwesome;
+  color:#318ca0;
+  font-size:32px;
+}
+
+li.one:before {
+   content:"\f111"; 
+}
+li.two:before {
+   content:"\f00c";
+}
+li.three:before {
+   content:"\f10c";
+}
+li.four:before {
+   content:"\f004";
+}
+li.five:before {
+   content:"\f1e2";
+}
+li.six:before {
+   content:"\f0e7";
+}
+
+li:hover:before {
+  color:#fff;
+}
+
+
+.js-slidein {
+  opacity: 0;
+  transform: translateY(100px);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.js-slidein-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.navbar-nav{
+    flex-direction: row;
+    background-color: #212529!important;
+}
+
+.navbar-brand {
+    font-family: Oleo Script Swash Caps;
+    font-size: xx-large;
+}
+.tabs{
+    width: 60%;
+}
+.sub-sec2>p{
+    font-family: 'Cormorant Garamond';
+    font-size: large;
+    font-weight: 600;
+    color: #0000008c;
+}
+
+@media (max-width:1000px) {
+    .tabs{
+        width: 80%;
+    }
+}
+@media (max-width:700px) {
+    .tabs{
+        width: 92%;
+    }
+}
+@media (max-width:400px) {
+    .tab{
+        flex-direction: column;
+    }
+    .sub-sec1{
+        padding: 0;
+        padding-left: 30px;
+        width: auto;
+    }
+    .sub-sec2{
+        padding-top: 0;
+        padding: 10px;
+        width: auto;
+    }
+    .spl-tab{
+        flex-direction: row;
+    }
+    .spl-tab>.sub-sec1{
+        width: 40%;
+    }
+    .spl-tab>.sub-sec2{
+        width: 60%;
+    }
+    .sub-sec2>p{
+        font-size: medium;
+    }
+}
+@media (max-width:500px){
+    .bar-sec-spl{
+        margin-top: 90px;
+    }
+}

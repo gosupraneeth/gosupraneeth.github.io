@@ -289,6 +289,13 @@ body{
     .main-name{
         font-size: -webkit-xxx-large;
     }
+    #myVideo {
+        display: flex;
+    }
+    
+    #myVideo2 {
+        display: none;
+    }
 }
 @media (max-width:400px) {
     .section2{

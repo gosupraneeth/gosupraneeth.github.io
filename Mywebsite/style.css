@@ -20,8 +20,8 @@ body{
 .section1{
     display: inline-flex;
     flex-wrap: wrap;
-    background-image: url(bg3.jpg);
-    background-image: url(https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGxhcHRvcCUyMGRlc2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+    /* background-image: url(background.gif); */
+    /* background-image: url(https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGxhcHRvcCUyMGRlc2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
@@ -33,6 +33,22 @@ body{
     transition: 0.8s;
     animation: fade 0.8s;
     animation-timing-function: linear;
+}
+#myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+    /* display: none; */
+}
+#myVideo2 {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+    /* display: none; */
 }
 .name{
     transition: 0.8s;
@@ -277,11 +293,27 @@ body{
 @media (max-width:400px) {
     .section2{
         width: 90%;
+    }   
+}
+
+@media (max-width:600px){
+    #myVideo2 {
+        display: flex;
     }
     
+    #myVideo {
+        display: none;
+    }
 }
+
 @media (min-width:990px) {
     .name{
         font-size: 88px;
+    }
+    #myVideo {
+        display: flex;
+    }
+    #myVideo2 {
+        display: none;
     }
 }

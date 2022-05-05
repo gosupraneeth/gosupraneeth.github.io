@@ -64,12 +64,16 @@
                 document.querySelector('.section1').style.height = (h) + 'px';
                 if (w < 990) {
                     document.querySelector('.section2').classList.add('js-slidein');
+                    document.querySelector('#video_src').setAttribute('src', "background_2.mp4");
                     setTimeout(()=>{
                         var h = window.innerHeight;
                         document.querySelector('.section2').style.height = (h - 75) + 'px';
                         document.querySelector('.section1').style.height = (h) + 'px';
                     },1500);
                     
+                }
+                else{
+                    document.querySelector('#video_src').setAttribute('src', "background_1.mp4");
                 }
             });
             window.onresize =()=>{
@@ -79,12 +83,14 @@
                     var h = window.innerHeight;
                     document.querySelector('.section2').style.height = (h - 75) + 'px';
                     document.querySelector('.section1').style.height = (h) + 'px';
+                    document.querySelector('#video_src').setAttribute('src', "background_2.mp4");
                 }
                 else{
                     document.querySelector('.section2').classList.add('js-slidein-visible');
                     var h = window.innerHeight;
                     document.querySelector('.section2').style.height = (h-35) + 'px';
                     document.querySelector('.section1').style.height = (h-35) + 'px';
+                    document.querySelector('#video_src').setAttribute('src',"background_1.mp4");
                 }
             };
             window.onscroll = () => {
@@ -129,13 +135,19 @@
             <div class="forcolor">
                 <div class="name-section">
                     <div class="section1">
-                        <div class="trans">
+                        <!-- <div class="trans">
                             <div class="name">
                                 <span style="font-size: 20px; font-family: Pattaya;letter-spacing: 4px;">Hello, I'M</span><br>
                                 <span class="main-name">Praneeth</span><br>
                                 <span class="font_4">Student at National Institute of Technology Karnataka</span>
                             </div>
-                        </div>
+                        </div> -->
+                        <video autoplay muted loop id="myVideo">
+                            <source id="video_src" src="background_1.mp4" type="video/mp4">
+                        </video>
+                        <video autoplay muted loop id="myVideo2">
+                            <source id="video_src" src="background_2.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="section2">
                         <div class="details-div">
